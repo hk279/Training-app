@@ -50,7 +50,7 @@ li > a:hover {
     height: 100vh;
 }
 
-.container > div:not(.login) {
+.container > div {
     background-size: cover;
     background-attachment: fixed;
     display: flex;
@@ -148,4 +148,27 @@ a:visited {
 }
 .ant-divider {
     background-color: slategray;
+}
+.signup-column {
+    margin: 0;
+    padding: 1em;
+    width: 50%;
+    display: inline-flex;
+    vertical-align: middle;
+    height: 100vh;
+}
+.signup-column:first-child {
+    background-image: url(./images/blurred_gym.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.signup {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: auto;
+}
+.signup-header {
+    color: #ffffff;
 }

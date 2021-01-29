@@ -1,8 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useState } from "react";
 import { Button, Divider, Input, Form } from "antd";
-import { Redirect } from "react-router";
 import app from "../Firebase.js";
-import { AuthContext } from "../Authentication.js";
 import { useHistory } from "react-router-dom";
 
 const Login = () => {
@@ -19,12 +17,6 @@ const Login = () => {
             alert(error);
         }
     };
-
-    const { currentUser } = useContext(AuthContext);
-
-    if (currentUser) {
-        return <Redirect to="/" />;
-    }
 
     return (
         <div className="login">
@@ -47,6 +39,8 @@ const Login = () => {
                     Login with Google
                 </Button>
             </Form>
+            <Divider />
+            <a href="/signup">Create a new account</a>
         </div>
     );
 };

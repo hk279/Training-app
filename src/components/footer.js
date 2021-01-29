@@ -11,7 +11,7 @@ const Footer = () => {
         app.auth()
             .signOut()
             .then(() => {
-                history.push("/landing");
+                history.push("/");
             })
             .catch((error) => {
                 alert(error);
